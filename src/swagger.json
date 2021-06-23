@@ -1,0 +1,84 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Rest API.",
+        "version": "1.0.5",
+        "title": "Rest API",
+        "license": {
+            "name": "Apache 2.0",
+            "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+        }
+    },
+    "host": "http://localhost/",
+    "basePath": "api",
+    "tags": [
+        {
+            "name": "Fav Users",
+            "description": "Get Fav users"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "paths": {
+        "/update-fav-users": {
+            "post": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Update fav users",
+                "description": "",
+                "operationId": "updateFavUser",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Usuarios guardados!",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        },
+        "/fav-users": {
+            "get": {
+                "tags": [
+                    "auth"
+                ],
+                "summary": "Update fav users",
+                "description": "",
+                "operationId": "updateFavUser",
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "in": "body",
+                        "name": "body",
+                        "description": "Usuarios guardados!",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "successful operation"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {}
+}
