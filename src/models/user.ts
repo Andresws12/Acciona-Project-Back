@@ -1,4 +1,4 @@
-export interface User {
+interface User {
     gender: string;
     name: {
         title: string;
@@ -50,4 +50,9 @@ export interface User {
         thumbnail: string;
     };
     nat: string;
+}
+
+export interface ListUsers {
+    nickname: string;
+    users: User[];
 }

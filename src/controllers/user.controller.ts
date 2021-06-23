@@ -1,11 +1,11 @@
 import { Request, Response } from 'express';
 
-import { User } from '../models/user';
+import { ListUsers } from '../models/user';
 
-let favUsers: User[] = [];
+let favUsers: ListUsers[] = [];
 
 export async function updateFavUsers(req: Request, res: Response) {
-    favUsers = req.body;
+    favUsers.push(req.body);
 
     return res.json(favUsers);
 }
